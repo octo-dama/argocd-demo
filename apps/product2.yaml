@@ -8,18 +8,21 @@ spec:
   project: prod
   source:
     repoURL: https://github.com/octo-dama/argocd-demo.git
+    # repoURL: https://haproxytech.github.io/helm-charts/haproxy
     targetRevision: HEAD
     helm:
       releaseName: product2
+      # valueFiles:
+      #   - "my_values.yml"
     path: helm-charts/haproxy
   destination:
     server: https://kubernetes.default.svc
     namespace: product2
   syncPolicy:
-    automated:
-      selfHeal: false
-      prune: false
-      allowEmpty: false
+    # automated:
+    #   selfHeal: false
+    #   prune: false
+    #   allowEmpty: false
     syncOptions:
       - CreateNamespace=true
       # - ApplyOutOfSyncOnly=true

@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: toto
+  namespace: product2
+secrets:
+- name: toto-token-hrt2w

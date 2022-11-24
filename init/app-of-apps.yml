@@ -1,0 +1,32 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app-of-apps
+  namespace: argocd-applications
+spec:
+  project: prod
+  source:
+    repoURL: https://github.com/octo-dama/argocd-demo.git
+    targetRevision: HEAD
+    path: apps
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argocd-applications
+  syncPolicy:
+    automated:
+      selfHeal: false
+      prune: false
+      allowEmpty: false
+    syncOptions:
+      - CreateNamespace=true
+      # - ApplyOutOfSyncOnly=true
+      # - PruneLast=true
+      # - Replace=true
+      # - FailOnSharedResource=true
+      # - RespectIgnoreDifferences=true
+  # ignoreDifferences:
+  # - group: "apps"
+  #   kind: "Deployment"
+  #   jsonPointers:
+  #   - /spec/replicas

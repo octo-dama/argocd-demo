@@ -1,0 +1,8 @@
+apiVersion: v2
+name: minju-nginx
+version: 1.0.0
+
+dependencies:
+  - name: nginx
+    repository: https://charts.bitnami.com/bitnami
+    version: 13.2.14

@@ -5,7 +5,7 @@ metadata:
   name: app-of-apps
   namespace: argocd-applications
 spec:
-  project: prod
+  project: default
   source:
     repoURL: https://github.com/octo-dama/argocd-demo.git
     targetRevision: HEAD

@@ -12,8 +12,8 @@ spec:
     targetRevision: HEAD
     helm:
       releaseName: product2
-      # valueFiles:
-      #   - "my_values.yml"
+      valueFiles:
+        - "my_values.yml"
     path: helm-charts/haproxy
   destination:
     server: https://kubernetes.default.svc

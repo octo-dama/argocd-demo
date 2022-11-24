@@ -19,10 +19,10 @@ spec:
     server: https://kubernetes.default.svc
     namespace: product2
   syncPolicy:
-    # automated:
-    #   selfHeal: false
-    #   prune: false
-    #   allowEmpty: false
+    automated:
+      selfHeal: true
+      prune: false
+      allowEmpty: false
     syncOptions:
       - CreateNamespace=true
       # - ApplyOutOfSyncOnly=true

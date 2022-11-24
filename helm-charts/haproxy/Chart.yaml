@@ -1,0 +1,8 @@
+apiVersion: v2
+name: minju-haproxy
+version: 1.0.0
+
+dependencies:
+  - name: haproxy
+    repository: https://haproxytech.github.io/helm-charts
+    version: 1.17.3

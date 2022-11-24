@@ -11,7 +11,7 @@ spec:
     targetRevision: HEAD
     helm:
       releaseName: product2
-    path: helm-charts/nginx
+    path: helm-charts/haproxy
   destination:
     server: https://kubernetes.default.svc
     namespace: product2
